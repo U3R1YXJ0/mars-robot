@@ -43,7 +43,17 @@ public class Robot {
             case W -> position.setX(position.getX() - 1);
             case S -> position.setY(position.getY() - 1);
             case E -> position.setX(position.getX() + 1);
-            default -> throw new IllegalStateException("Unexpected state when turning right");
+            default -> throw new IllegalStateException("Unexpected state when moving forward");
+        }
+    }
+
+    public void moveBackward(){
+        switch (orientation) {
+            case N -> position.setY(position.getY() -1 );
+            case W -> position.setX(position.getX() + 1);
+            case S -> position.setY(position.getY() + 1);
+            case E -> position.setX(position.getX() - 1);
+            default -> throw new IllegalStateException("Unexpected state when moving backward");
         }
     }
 }

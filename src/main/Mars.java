@@ -42,6 +42,10 @@ public final class Mars {
         return INSTANCE;
     }
 
+    public static Mars getInstance() {
+        return INSTANCE;
+    }
+
     private static void validateInputs(Integer eastEdge, Integer northEdge){
         if(eastEdge == null){
             throw new IllegalArgumentException("The eastEdge of Mars cannot be Null.");
